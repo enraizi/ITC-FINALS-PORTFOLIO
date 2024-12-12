@@ -1,0 +1,1362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313; 
+    --main-color: #00ffee;
+    --text-color: white;
+    --text-color-subheading: #ffffff;
+    --nav-color: #6f08b4;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: Poppins, sans-serif; /* Added a fallback font */
+    text-decoration: none;
+    
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: var(--bg-color);
+    color: var(--text-color);
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 12% 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 3rem;
+    font-style: italic;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo:span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+nav a {
+    font-size: 1.8rem;
+    /* color: var(--text-color); */
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover, nav a:active 
+{
+    color: #6f08b4;
+    border-bottom: 3px solid #6f08b4;
+    transform: scale(1.1);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--nav-color);
+    display: none;
+}
+
+@media (max-width: 995px) {
+    #menu-icon {
+        display: block; /* Show the menu icon for smaller screens */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100px; /* Ensure this has a valid unit */
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #6f08b4;
+        border-bottom: 3px solid;
+        border-top-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: #6f08b4;
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #6f08b4;
+        border-bottom: 3px solid #6f08b4;
+    }
+}
+
+@media (max-width: 986px) {
+    .navbar {
+        position: absolute;
+        top: 100px; /* Ensure this has a valid unit */
+        right: 0;
+        width: 40%;
+        border-left: 3px solid green;
+        border-bottom: 3px solid;
+        border-top-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: red;
+        display: none;
+        z-index: 5;
+    }
+    .navbar.active {
+        display: block;
+    }
+    
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #d81717;
+        border-bottom: 3px solid #d81717;
+    }
+
+    
+    /* Adjustments for the home section */
+    .home {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+        gap: 15rem; /* Adjust gap as needed */
+        z-index: 1;
+    }
+
+    .home-img {
+        height: 200px; /* Adjust height for smaller screens */
+        width: 200px; /* Adjust width for smaller screens */
+        z-index: 1;
+    }
+
+    .home-content {
+        max-width: 90%; /* Allow more space for content */
+        text-align: center; /* Center text for smaller screens */
+        padding: 1rem; /* Add some padding for better visibility */
+    }
+
+    .home-content h1{
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: absolute;
+        top: 100px; /* Ensure this has a valid unit */
+        right: 0;
+        width: 40%;
+        border-left: 3px solid green;
+        border-bottom: 3px solid;
+        border-top-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: red;
+        display: none;
+        z-index: 5;
+    }
+    .navbar.active {
+        display: block;
+    }
+    
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #d81717;
+        border-bottom: 3px solid #d81717;
+    }
+
+    
+    /* Adjustments for the home section */
+    .home {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+        gap: 15rem; /* Adjust gap as needed */
+        z-index: 1;
+    }
+
+    .home-img {
+        height: 200px; /* Adjust height for smaller screens */
+        width: 200px; /* Adjust width for smaller screens */
+        z-index: 1;
+    }
+
+    .home-content {
+        max-width: 90%; /* Allow more space for content */
+        text-align: center; /* Center text for smaller screens */
+        padding: 1rem; /* Add some padding for better visibility */
+    }
+
+    .home-content h1{
+        font-size: 2rem;
+    }
+
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.408);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu a:hover{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.327);
+    text-align: center;
+
+}
+
+
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 0px;
+
+}
+
+.toggle_btn {
+    display: none;
+}
+
+/* RESPONSIVE NAVIGATOR */
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+} 
+
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--nav-color);
+    display: none;
+}
+
+@media (max-width: 995px) {
+    #menu-icon {
+        display: block; /* Show the menu icon for smaller screens */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100px; /* Ensure this has a valid unit */
+        right: 0;
+        width: 40%;
+        border-left: 3px solid green;
+        border-bottom: 3px solid;
+        border-top-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: #6f08b4;
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #6f08b4;
+        border-bottom: 3px solid #6f08b4;
+    }
+
+    /* Adjustments for the home section */
+    .home {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+        gap: 4rem; /* Adjust gap as needed */
+    }
+
+    .home-img {
+        height: 200px; /* Adjust height for smaller screens */
+        width: 200px; /* Adjust width for smaller screens */
+    }
+
+    .home-content {
+        max-width: 90%; /* Allow more space for content */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .home-content h1{
+        font-size: 2rem;
+    }
+}
+
+/* -------------------Canva Star Animation ---------------------- */
+#canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.star-container{
+    position: relative;
+    overflow: hidden;
+}
+
+/* ------------------------- SECTION 1 ------------------ */
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    
+    background-size: cover; /* Scale to cover the section */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+}
+
+
+.home-content {
+    max-width: 600px; /* Optional: Control the width of the text */
+    z-index: 2;
+}
+
+span {
+    color: #6f08b4;
+    font-family: "Work Sans", sans-serif;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content h1{
+    font-size: 2.5rem;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    color: var(--text-color-subheading);
+}
+
+
+/* ------------------------- SECTION 1 HOMEPAGE IMAGE ------------------ */
+.home-img {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 400px; /* Fixed height for consistent layout */
+    width: 400px; /* Fixed width for image */
+    z-index: 2;
+}
+
+.home-img img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 0 25px solid #d81717;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    scale: 1.1;
+}
+
+.home-img img:hover {
+    transform: scale(1.2);
+}
+
+/* ------------------------- SECTION 1 HOMEPAGE SOCIAL ICONS ------------------ */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--nav-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.3) translateY(-5px);
+    background-color: var(--nav-color);
+    box-shadow: 0 0 25px var(--nav-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--nav-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    border: 2px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: black;
+    transform: scale3d(1.03);
+    background-color: var(--text-color);
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--nav-color);
+}
+
+/* ------------------ SECTION 2 ------------------------------ */
+
+.aboutme {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align */
+    align-items: center; /* Vertically center */
+    gap: 8rem; /* Space between image and content */
+    background-color: #41027c;
+    flex-direction: row; /* Ensure text and image are in rows */
+    padding: 5rem 9%; /* Add more padding for spacing */
+    
+}
+
+.aboutme-img {
+    height: 400px; 
+    width: 400px; 
+}
+
+.aboutme-img img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 0 25px solid #d81717; /* Shadow effect */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 25%;
+}
+
+.aboutme-img img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.aboutme-content {
+    max-width: 600px; /* Optional: Control the width of the text */
+}
+
+.aboutme-content h2 {
+    font-size: 6rem; /* Set the font size for the heading */
+    margin-bottom: 1rem; /* Spacing below the heading */
+    font-weight: 700; /* Bold weight */
+    text-align: center; /* Center align the heading */
+    color: #ab2ff3;
+}
+
+.aboutme-content p {
+    font-size: 1.5rem; /* Font size for the paragraph */
+    color: #ffffff; /* Use the variable for color */
+}
+
+/* For screens smaller than 991px (tablets and medium devices) */
+@media (max-width: 995px) {
+    .aboutme {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+    }
+    .aboutme-content {
+        max-width: 90%;
+    }
+}
+
+/* For screens smaller than 768px (large phones) */
+@media (max-width: 768px) {
+    .aboutme {
+        padding: 8rem 5%; /* Less padding for mobile */
+        gap: 4rem; /* Reduce gap between image and text */
+    }
+
+    .aboutme-img {
+        height: 250px;
+        width: 250px; /* Further reduce image size */
+    }
+
+    .aboutme-content h2 {
+        margin-top: 5rem;
+        font-size: 4rem; /* Smaller heading for mobile */
+    }
+
+    .aboutme-content p {
+        font-size: 1.5rem; /* Slightly smaller text for mobile */
+    }
+}
+
+/* For screens smaller than 600px (small phones) */
+@media (max-width: 600px) {
+    .aboutme {
+        padding: 6rem 3%; /* Minimal padding for very small screens */
+    }
+
+    .aboutme-img {
+        height: 200px;
+        width: 200px; /* Smaller image */
+    }
+
+    .aboutme-content h2 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .aboutme-content p {
+        font-size: 1.2rem; /* Smaller text */
+    }
+}
+
+/* ------------------ SECTION 3 ------------------------------ */
+.skills{
+    background-color: #f7f7f7;
+}
+
+.skills h2.heading {
+    font-size: 10rem; /* Balanced font size */
+    color: #000000; /* Clean and modern color */
+    margin-bottom: 2rem; /* Moderate spacing */
+    font-weight: bolder; /* Slightly bold, but not too heavy */
+    text-transform: capitalize; /* Capitalizes the first letter only */
+    letter-spacing: 0.1rem; /* Minimal spacing for neatness */
+    text-align: center; /* Center-align for a polished look */
+}
+
+.skills h2.heading::after {
+    content: ''; /* Decorative line */
+    display: block;
+    width: 6rem; /* Shorter width for a subtle effect */
+    height: 0.3rem; /* Thin line */
+    background-color: #a431f1; 
+    margin: 1rem auto 0 auto; 
+    border-radius: 2px; 
+}
+
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 5rem;
+}
+
+.skills-box{
+    background-color: var(--nav-color);
+    height: 300px;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.skills-box:hover {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transform: scale(1.03);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.skills-box .skills-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.skills-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.skills-info i {
+    font-size: 4rem; /* Increased icon size for better visibility */
+    margin-top: 1.5rem; /* Added space below the icon */
+    margin-bottom: 1rem;
+}
+
+.skills-info h4 {
+    font-size: 1.7rem; /* Adjusted font size for the label */
+    font-weight: 500;
+    margin-bottom: 1rem; /* Space below the label */
+}
+
+.skills-info p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    max-height: 100px;
+    margin: auto;
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .skills {
+        padding-bottom: 7rem;
+    }
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .skills-box {
+        height: auto;
+    }
+}
+
+@media (max-width: 895px) {
+    .skills h2 {
+        margin-bottom: 3rem;
+        text-align: center; /* Center the heading */
+    }
+    .skills-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+    .skills-box {
+        padding: 2rem; /* Adjust padding for smaller screens */
+        height: auto; /* Allow flexible height */
+    }
+    .skills-info {
+        padding: 3em;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+    .skills h2.heading {
+        font-size: 5rem;
+    }
+    .skills-box {
+        padding: 1.5rem; /* Reduce padding further for very small screens */
+    }
+    .skills-info {
+        padding: 2em; /* Smaller padding */
+    }
+}
+
+/* ------------------ SECTION PROJECTS ------------------------------ */
+
+.projects {
+    background-color: rgb(160, 157, 157);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex; /* Ensure the section is a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align children */
+}
+
+.projects h1 {
+    font-size: 50px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bolder;
+    padding: 6.5vh;
+    margin-bottom: 0.5vh;
+}
+
+.soon-img {
+    height: 400px; 
+    width: 400px;
+}
+
+.soon-img img {
+    width: 100%;
+    height: auto; 
+    box-shadow: 0 0 25px solid #d81717; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 25%;
+    padding: 5vh;
+}
+
+.soon-img img:hover {
+    transform: scale(1.1); 
+}
+
+.soon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 50px;
+    justify-content: center;
+    padding: 0em;
+}
+
+.soon h2 {
+    font-size: 4rem; /* Increased icon size for better visibility */
+    margin-top: 1.5rem; /* Added space below the icon */
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    color: #080808;
+}
+
+@media (max-width: 991px) {
+    .projects {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+        padding: 10rem 3% 2rem;
+    }
+
+    .soon-img {
+        height: 250px;
+        width: 250px; /* Further reduce image size */
+    }
+
+    .projects h1 {
+        margin-top: 2.5rem;
+        font-size: 4rem; /* Smaller heading for mobile */
+    }
+
+    .soon {
+        font-size: 1.5rem; /* Slightly smaller text for mobile */
+    }
+    .soon h2 {
+        font-size: 1.5rem; /* Slightly smaller text for mobile */
+    }
+
+}
+
+@media (max-width: 895px) {
+    .projects {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+    }
+    .skills-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+    .skills-box {
+        padding: 2rem; /* Adjust padding for smaller screens */
+        height: auto; /* Allow flexible height */
+    }
+    .skills-info {
+        padding: 3em;
+    }
+}
+
+/* For screens smaller than 768px (large phones) */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+    }
+
+    .soon-img {
+        height: 250px;
+        width: 250px; /* Further reduce image size */
+    }
+
+    .projects h1 {
+        margin-top: 5rem;
+        font-size: 4rem; /* Smaller heading for mobile */
+    }
+
+    .soon {
+        font-size: 1.5rem; /* Slightly smaller text for mobile */
+    }
+    .soon h2 {
+        font-size: 1.5rem; /* Slightly smaller text for mobile */
+    }
+}
+
+/* For screens smaller than 600px (small phones) */
+@media (max-width: 600px) {
+    .projects {
+        padding: 6rem 3%; /* Minimal padding for very small screens */
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+    }
+
+    .soon-img {
+        height: 200px;
+        width: 200px; /* Smaller image */
+    }
+
+    .projects h1 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .soon {
+        font-size: 1.2rem; /* Smaller text */
+    }
+
+    .soon h2 {
+        font-size: 1.2rem; /* Smaller text */
+    }
+}
+
+
+/* ------------------ SECTION 4 ------------------------------ */
+
+.sdg {
+    background-image: linear-gradient(rgba(19, 19, 20, 0.7), rgba(19, 19, 20, 0.7)), url(trees.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    
+    background-size: cover; /* Scale to cover the section */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+}
+
+
+.sdg h1.heading {
+    font-size: 4rem; /* Balanced font size */
+    color: #16d86d; /* Clean and modern color */
+    margin-bottom: 2rem; /* Moderate spacing */
+    font-weight: bolder; /* Slightly bold, but not too heavy */
+    text-transform: capitalize; /* Capitalizes the first letter only */
+    letter-spacing: 0.1rem; /* Minimal spacing for neatness */
+    text-align: center; /* Center-align for a polished look */
+}
+
+.sdg-content {
+    font-size: 1.5rem; /* Balanced font size */
+    color: #ffffff; /* Clean and modern color */
+    margin-bottom: 2rem; /* Moderate spacing */
+    font-weight: bolder; /* Slightly bold, but not too heavy */
+    letter-spacing: 0.1rem; /* Minimal spacing for neatness */
+    text-align: center; /* Center-align for a polished look */
+}
+
+.sdg-content p {
+    text-align: center;
+}
+
+.sdg-btn {
+    display: inline-block;
+    padding: 1rem 5rem;
+    background-color: #16d86d; /* Green color */
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    border: 2px; /* You might want to specify the border style */
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-top: 40px;
+    text-align: center; /* Center text inside the link */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.sdg-btn:hover {
+    color: rgb(255, 255, 255);
+    transform: scale3d(1.03);
+    background-color: #14b85a; /* A slightly darker green for hover effect */
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #16d86d;
+}
+
+.heading {
+    color: #16d86d;
+    font-family: "Work Sans", sans-serif;
+}
+
+.sdg-content span {
+    color: #16d86d;
+    font-family: "Work Sans", sans-serif;
+}
+
+.sdg-img {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 350px; /* Fixed height for consistent layout */
+        width: 350px; /* Fixed width for image */
+    }
+    
+    .sdg-img img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        box-shadow: 0 4px 15px solid #3d3a3a;
+        cursor: pointer;
+        transition: transform 7s ease-in-out;
+        border-radius: 50%;
+        scale: 1.1;
+    }
+    
+    .sdg-img img:hover {
+        transform: rotate(360deg);
+}
+
+@media (max-width: 995px) {
+    .sdg {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+    }
+    .sdg-content {
+        max-width: 90%;
+    }
+}
+
+/* For screens smaller than 768px (large phones) */
+@media (max-width: 768px) {
+    .sdg {
+        padding: 8rem 5%; /* Less padding for mobile */
+        gap: 4rem; /* Reduce gap between image and text */
+    }
+
+    .sdg-img {
+        height: 250px;
+        width: 250px; /* Further reduce image size */
+    }
+
+    .sdg-content h2 {
+        margin-top: 5rem;
+        font-size: 4rem; /* Smaller heading for mobile */
+    }
+
+    .sdg-content p {
+        font-size: 1.5rem; /* Slightly smaller text for mobile */
+    }
+}
+
+/* For screens smaller than 600px (small phones) */
+@media (max-width: 600px) {
+    .sdg {
+        padding: 6rem 3%; /* Minimal padding for very small screens */
+    }
+
+    .sdg-img {
+        height: 200px;
+        width: 200px; /* Smaller image */
+    }
+
+    .sdg-content h2 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .sdg-content p {
+        font-size: 1.2rem; /* Smaller text */
+    }
+}
+
+/* ------------------ SECTION 5 ------------------------------ */
+
+.sdg-help {
+    background-image: linear-gradient(rgba(19, 19, 20, 0.7), rgba(19, 19, 20, 0.7)), url(tree.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    
+    background-size: cover; /* Scale to cover the section */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+}
+
+
+.sdg-help h1.heading {
+    font-size: 8rem; /* Balanced font size */
+    color: #16d86d; /* Clean and modern color */
+    margin-top: 5rem;
+    margin-bottom: 0rem; /* Moderate spacing */
+    font-weight: bolder; /* Slightly bold, but not too heavy */
+    text-transform: capitalize; /* Capitalizes the first letter only */
+    letter-spacing: 0.1rem; /* Minimal spacing for neatness */
+    text-align: center; /* Center-align for a polished look */
+    font-style: italic;
+    
+}
+
+.sdg-help h1.heading::after {
+    content: ''; /* Decorative line */
+    display: block;
+    width: 6rem; /* Shorter width for a subtle effect */
+    height: 0.3rem; /* Thin line */
+    background-color: #f8f8f8; 
+    margin: 1rem auto 0 auto; 
+    border-radius: 2px; 
+}
+
+.sdg-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+}
+
+.how-box {
+    background-color: #16d86d;
+    height: 300px;
+    width: 400px;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.how-box:hover {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transform: scale(1.03);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.how-box .sdg-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+
+.sdg-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.sdg-info i {
+    font-size: 4rem; /* Increased icon size for better visibility */
+    margin-top: 1.5rem; /* Added space below the icon */
+    margin-bottom: 1rem;
+}
+
+.sdg-info h4 {
+    font-size: 1.7rem; /* Adjusted font size for the label */
+    font-weight: 500;
+    margin-bottom: 1rem; /* Space below the label */
+}
+
+.sdg-info p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    max-height: 100px;
+    margin: auto;
+}
+
+@media (max-width: 995px) {
+    .sdg-container{
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+    .sdg-help {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+    }
+    .how-box {
+        max-width: 90%;
+    }
+}
+
+/* For screens smaller than 768px (large phones) */
+@media (max-width: 768px) {
+    .sdg-info {
+        max-height: 500px;
+    }
+    .sdg-container{
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+    .sdg-help {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        gap: 4rem; /* Adjust gap */
+        text-align: center;
+    }
+    .how-box {
+        max-width: 90%;
+    }
+    .sdg-help {
+        padding: 8rem 5%; /* Less padding for mobile */
+        gap: 4rem; /* Reduce gap between image and text */
+    }
+
+    .sdg-img {
+        height: 250px;
+        width: 250px; /* Further reduce image size */
+    }
+
+    .how-box {
+        width: auto;
+        height: 400px;
+    }
+    .how-box h4 {
+        margin-top: 5rem;
+        font-size: 4rem; /* Smaller heading for mobile */
+    }
+
+    .how-box p {
+        font-size: 1.5rem; /* Slightly smaller text for mobile */
+    }
+}
+
+/* For screens smaller than 600px (small phones) */
+@media (max-width: 600px) {
+    .sdg-help {
+        padding: 6rem 3%; /* Minimal padding for very small screens */
+    }
+
+    .sdg-img {
+        height: 200px;
+        width: 200px; /* Smaller image */
+    }
+
+    .how-box h4 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .how-box p {
+        font-size: 1.2rem; /* Smaller text */
+    }
+}
+
+/* ------------------ SECTION FOOTER -------------------------- */
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 5px 0;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 80vh;
+    margin-left: 50px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.logo-container {
+    display: flex;
+    text-align: right;
+    font-size: 50px;
+    margin-left: 1200px;
+    font-style: italic;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left; 
+}
+
+.social-media {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h3, .social-media h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.contact-info p, .social-media a { 
+    font-size: 14px;
+    margin: 5px 0;
+    color: #bbb;
+    text-decoration: none;
+    text-align: left; 
+    width: max-content;
+}
+
+.contact-info a:hover, .social-media a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+@media (max-width: 1820px) {
+    .footer-container {
+        align-items: flex-start; /* Align items to the start */
+    }
+    .contact-info, .social-media {
+        margin-bottom: 20px;
+    }
+    .logo-container{
+        margin-left: 1000px;
+    }
+}
+@media (max-width: 1250px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+    .contact-info, .social-media {
+        margin-bottom: 20px;
+    }
+    .logo-container{
+        margin-left: 800px;
+    }
+}
+@media (max-width: 995px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+    .contact-info, .social-media {
+        margin-bottom: 20px;
+    }
+    .logo-container{
+        margin-left: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+    .contact-info, .social-media {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+    .contact-info, .social-media {
+        margin-bottom: 20px;
+    }
+}
